@@ -8,10 +8,11 @@ import SEO from '../components/SEO';
 const Home = () => {
     return (
         <>
-            <SEO
-                title="Home"
-                description="Welcome to JUIZA BURST. Experience the freshest organic cold-pressed juices delivered to your doorstep."
-                keywords="juiza, fresh juice, organic, cold pressed, home delivery"
+            <SEO 
+                title="JUIZA - Fresh Cold-Pressed Juices | 100% Natural Fruit Drinks"
+                description="Discover premium fresh cold-pressed juices at JUIZA. Shop 100% natural fruit juices with no preservatives, no added sugar. Fast home delivery available!"
+                keywords="fresh juice, cold pressed juice, natural drinks, JUIZA, healthy beverages"
+                ogImage="https://juiza.netlify.app/images/home-hero.jpg"
             />
             <Hero />
             <ProductShowcase />

@@ -66,9 +66,10 @@ const Shop = () => {
 
     return (
         <div className="pt-32 pb-20 px-6 bg-white min-h-screen">
-            <SEO
-                title="Shop Premium Juices"
-                description="Browse our collection of cold-pressed, organic juices. From citrus bursts to green detox blends."
+            <SEO 
+                title="Shop Fresh Juices Online - Cold-Pressed & Natural | JUIZA"
+                description="Browse our collection of fresh cold-pressed fruit juices. Mango, Orange, Pomegranate & more. 100% natural with no preservatives. Order now!"
+                keywords="buy fresh juice, juice shop, cold pressed drinks, natural juice delivery"
             />
             <ProductDetailsModal
                 isOpen={!!selectedProduct}

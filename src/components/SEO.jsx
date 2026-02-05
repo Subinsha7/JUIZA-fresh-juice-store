@@ -1,41 +1,41 @@
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, keywords, image, url }) => {
-    const siteTitle = 'JUIZA BURST | Premium Cold-Pressed Juices';
-    const defaultDescription = 'Experience pure refreshment with JUIZA BURST. 100% organic, cold-pressed juices handcrafted for your well-being. Order online for wide delivery.';
-    const defaultKeywords = 'organic juice, cold press, health drinks, detox, fresh juice, buy juice online';
-    const defaultImage = '/COVER.png';
-    const siteUrl = 'https://juiza.netlify.app'; // Replace with actual URL
-
-    const fullTitle = title ? `${title} | JUIZA BURST` : siteTitle;
-    const finalDescription = description || defaultDescription;
-    const finalKeywords = keywords || defaultKeywords;
-    const finalImage = image ? `${siteUrl}${image}` : `${siteUrl}${defaultImage}`;
-    const finalUrl = url ? `${siteUrl}${url}` : siteUrl;
-
-    return (
-        <Helmet>
-            {/* Standard Metadata */}
-            <title>{fullTitle}</title>
-            <meta name="description" content={finalDescription} />
-            <meta name="keywords" content={finalKeywords} />
-            <link rel="canonical" href={finalUrl} />
-
-            {/* Open Graph / Facebook */}
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content={finalUrl} />
-            <meta property="og:title" content={fullTitle} />
-            <meta property="og:description" content={finalDescription} />
-            <meta property="og:image" content={finalImage} />
-
-            {/* Twitter */}
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content={finalUrl} />
-            <meta property="twitter:title" content={fullTitle} />
-            <meta property="twitter:description" content={finalDescription} />
-            <meta property="twitter:image" content={finalImage} />
-        </Helmet>
-    );
-};
-
-export default SEO;
+export default function SEO({ 
+  title = "JUIZA - Fresh Cold-Pressed Juices Online | 100% Natural",
+  description = "Shop premium fresh cold-pressed juices online at JUIZA. 100% natural fruit juices with no preservatives or added sugar. Fast delivery. Order healthy drinks now!",
+  keywords = "fresh juice online, cold pressed juice, natural fruit juice, healthy drinks, juice delivery, JUIZA",
+  ogImage = "https://juiza.netlify.app/images/juiza-hero.jpg",
+  ogUrl = "https://juiza.netlify.app"
+}) {
+  return (
+    <Helmet>
+      {/* Primary Meta Tags */}
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="SUBIN TS" />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={ogUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="JUIZA" />
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={ogUrl} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <link rel="canonical" href={ogUrl} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+    </Helmet>
+  );
+}
