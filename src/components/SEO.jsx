@@ -5,7 +5,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
     const defaultDescription = 'Experience pure refreshment with JUIZA BURST. 100% organic, cold-pressed juices handcrafted for your well-being. Order online for wide delivery.';
     const defaultKeywords = 'organic juice, cold press, health drinks, detox, fresh juice, buy juice online';
     const defaultImage = '/COVER.png';
-    const siteUrl = 'https://juiza.com'; // Replace with actual URL
+    const siteUrl = 'https://juiza.netlify.app'; // Replace with actual URL
 
     const fullTitle = title ? `${title} | JUIZA BURST` : siteTitle;
     const finalDescription = description || defaultDescription;
